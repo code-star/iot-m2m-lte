@@ -73,12 +73,13 @@ SenMLIntRecord temperature(SENML_NAME_TEMPERATURE, SENML_UNIT_DEGREES_CELSIUS);
 SenMLDoubleRecord latitude(SENML_NAME_LATITUDE, SENML_UNIT_DEGREES_LATITUDE);
 SenMLDoubleRecord longitude(SENML_NAME_LONGITUDE, SENML_UNIT_DEGREES_LONGITUDE);
 
-#define STARTUP_DELAY 5000
+#define STARTUP_DELAY 10000
+
 #ifndef NBIOT_BANDMASK
 #define NBIOT_BANDMASK BAND_MASK_UNCHANGED
 #endif
 unsigned long previousMillis = 0;
-const long interval = 60000;
+const long interval = 30000;
 
 #define BUFFER_SIZE 1024
 char buff[BUFFER_SIZE] = {0};
